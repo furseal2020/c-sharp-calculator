@@ -1,0 +1,23 @@
+﻿<Window x:Class="Calculator_hw.QueryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_hw"
+        mc:Ignorable="d"
+        Title="QueryWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dataGrid" CanUserAddRows="False" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="335" Margin="41.5,42.3,0,0" VerticalAlignment="Top" Width="540">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Expression" Width="110" Binding="{Binding Expression}"/>
+                <DataGridTextColumn Header="Preorder" Width="110" Binding="{Binding Preorder}"/>
+                <DataGridTextColumn Header="Postorder" Width="110" Binding="{Binding Postorder}"/>
+                <DataGridTextColumn Header="Decimal" Width="90" Binding="{Binding Dec_num}"/>
+                <DataGridTextColumn Header="Binary" Width="112" Binding="{Binding Bin_num}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btn_delete" Content="DELETE" HorizontalAlignment="Left" Height="52.8" Margin="627.1,42.3,0,0" VerticalAlignment="Top" Width="108" FontSize="15" Click="Btn_delete_Click"/>
+        <Button x:Name="btn_previous" Content="PREVIOUS" HorizontalAlignment="Left" Height="52.8" Margin="627.1,117.9,0,0" VerticalAlignment="Top" Width="108" FontSize="15" Click="Btn_previous_Click"/>
+
+    </Grid>
+</Window>
